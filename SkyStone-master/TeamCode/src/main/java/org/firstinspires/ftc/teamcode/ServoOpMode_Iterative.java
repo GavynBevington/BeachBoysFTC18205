@@ -51,7 +51,7 @@ import com.qualcomm.robotcore.hardware.Servo;
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
 
-@TeleOp(name="Basic: Iterative OpMode", group="Iterative Opmode")
+@TeleOp(name="ServoOpMode", group="Iterative Opmode")
 //@Disabled
 public class ServoOpMode_Iterative extends OpMode
 {

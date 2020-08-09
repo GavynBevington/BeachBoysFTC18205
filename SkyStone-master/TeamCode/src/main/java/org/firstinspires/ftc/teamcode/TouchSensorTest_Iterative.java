@@ -33,9 +33,10 @@ import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
+import com.qualcomm.robotcore.hardware.TouchSensor;
+import com.qualcomm.robotcore.hardware.Servo;
 
 /**
  * This file contains an example of an iterative (Non-Linear) "OpMode".
@@ -51,36 +52,29 @@ import com.qualcomm.robotcore.util.Range;
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
 
-@TeleOp(name="TurningOpMode", group="Iterative Opmode")
-//@Disabled
-public class TurningOpMode_Iterative extends OpMode
+@TeleOp(name="=TouchSensorTestOpMode", group="Iterative Opmode")
+@Disabled
+public class TouchSensorTest_Iterative extends OpMode
 {
     // Declare OpMode members.
     private ElapsedTime runtime = new ElapsedTime();
-    public DcMotor frontLeft;
-    public DcMotor rearLeft;
-    public DcMotor frontRight;
-    public DcMotor rearRight;
 
-    double leftPower  = 0.0;
-    double rightPower = 0.0;
+    TouchSensor touchSensor;
+    Servo servo;
+
+    double tSensorValue = 0.0;
+    double servoPosition;
     /*
      * Code to run ONCE when the driver hits INIT
      */
     @Override
     public void init() {
+
+
+        servo = hardwareMap.get("servo");
+        servo.setPosition(servoPosition);
+
         telemetry.addData("Status", "Initialized");
-
-
-
-        frontLeft  = hardwareMap.get("frontleft");
-        rearLeft   = hardwareMap.get("rearleft");
-        frontRight = hardwareMap.get("frontright");
-        rearRight  = hardwareMap.get("rearright");
-
-        frontLeft.setDirection(DcMotorSimple.Direction.REVERSE);
-        rearLeft.setDirection(DcMotorSimple.Direction.REVERSE);;
-
         // Tell the driver that initialization is complete.
         telemetry.addData("Status", "Initialized");
     }
@@ -105,18 +99,10 @@ public class TurningOpMode_Iterative extends OpMode
      */
     @Override
     public void loop() {
-        // Setup a variable for each drive wheel to save power level for telemetry
-        double speed = gamepad1.left_stick_y;
-        double turn  = gamepad2.right_stick_x;
 
-        leftPower    = Range.clip(speed + turn, -1.0, 1.0) ;
-        rightPower   = Range.clip(speed - turn, -1.0, 1.0) ;
-
-        // Send calculated power to wheels
-        frontLeft.setPower(leftPower);
-        rearLeft.setPower(leftPower);
-        frontRight.setPower(rightPower);
-        rearRight.setPower(rightPower);
+        if (touchSensor.isPressed()) {
+            servoPosition = 0.5;
+        }
 
         // Show the elapsed game time and wheel power.
         telemetry.addData("Status", "Run Time: " + runtime.toString());
