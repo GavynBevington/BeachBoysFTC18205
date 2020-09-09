@@ -9,6 +9,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1fkbJeHbfK5rXkrkzyYPxoRznr4" />
   <component name="ProjectViewState">
@@ -27,6 +28,58 @@
       <recent name="C:\Users\gavyn\Documents\GitHub\BeachBoysFTC18205\SkyStone-master\TeamCode\src\main\java\org\firstinspires\ftc\teamcode" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App" editBeforeRun="true">
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -41,10 +94,43 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="277" y="75" key="SettingsEditor" timestamp="1596765462883">
+    <state x="221" y="83" width="1089" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599688483341">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="221" y="83" width="1089" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1599688483341" />
+    <state x="618" y="321" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1599685427066">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="618" y="321" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1599685427066" />
+    <state x="624" y="197" key="AndroidProcessChooserDialog" timestamp="1599686687142">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="624" y="197" key="AndroidProcessChooserDialog/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1599686687142" />
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1599679916133">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1599679916133" />
+    <state x="277" y="75" key="SettingsEditor" timestamp="1599686179583">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="277" y="75" key="SettingsEditor/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1599686179583" />
     <state x="277" y="75" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1596765462883" />
+    <state x="558" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599686546770">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="558" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1599686546770" />
+    <state x="1920" y="0" width="850" height="735" key="dock-window-1" timestamp="1599680612516">
+      <screen x="1920" y="0" width="1280" height="720" />
+    </state>
+    <state x="1920" y="0" width="850" height="735" key="dock-window-1/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1599680612516" />
+    <state x="1920" y="0" width="1294" height="735" maximized="true" key="dock-window-2" timestamp="1599680844921">
+      <screen x="1920" y="0" width="1280" height="720" />
+    </state>
+    <state x="1920" y="0" width="1294" height="735" maximized="true" key="dock-window-2/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1599680844921" />
+    <state x="425" y="197" key="run.anything.popup" timestamp="1599686518853">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1599686518853" />
     <state x="431" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1596765633797">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
