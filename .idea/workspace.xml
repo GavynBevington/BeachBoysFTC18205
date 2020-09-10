@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce6df367-b1c4-4d57-a876-6599ff548ae4" name="Default Changelist" comment="" />
+    <list default="true" id="ce6df367-b1c4-4d57-a876-6599ff548ae4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +22,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/SkyStone-master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/SkyStone-master" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -106,10 +108,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="624" y="197" key="AndroidProcessChooserDialog/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1599686687142" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1599679916133">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1599758623313">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1599679916133" />
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1599758623312" />
     <state x="277" y="75" key="SettingsEditor" timestamp="1599686179583">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
