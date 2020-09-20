@@ -1,10 +1,12 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
+@TeleOp
 
 public class driveTest extends LinearOpMode
 {
@@ -15,7 +17,7 @@ public class driveTest extends LinearOpMode
     @Override
     public void runOpMode()
     {
-        LBM = hardwareMap.get(DcMotor.class, "LBM")
+        LBM = hardwareMap.get(DcMotor.class, "LBM");
         RBM = hardwareMap.get(DcMotor.class, "RBM");
 
         LBM.setDirection(DcMotorSimple.Direction.REVERSE);
