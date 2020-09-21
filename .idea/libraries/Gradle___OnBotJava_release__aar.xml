@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: :OnBotJava-release:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7fbba7bb7d64998c7de36bd411e59084/jetified-OnBotJava-release/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7fbba7bb7d64998c7de36bd411e59084/jetified-OnBotJava-release/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7fbba7bb7d64998c7de36bd411e59084/jetified-OnBotJava-release/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7fbba7bb7d64998c7de36bd411e59084/jetified-OnBotJava-release/jars/libs/javac.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../SkyStone-master/libs/OnBotJava-release-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

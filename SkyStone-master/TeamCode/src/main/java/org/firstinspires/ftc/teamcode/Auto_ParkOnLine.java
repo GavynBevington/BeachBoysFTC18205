@@ -21,16 +21,23 @@ public class Auto_ParkOnLine
 
         hardware.init(hardwareMap);
 
+        hardware.hdLBM.setMode(DcMotor.RunMode,RUN_ENCODER_USING_ENCODER);
+
+        double mVelocity = 288;
+
         waitForStart();
 
         while(opModeIsActive())
         {
 
-            hardware.backLeftMotor.setPower(1);
-            hardware.backRightMotor.setPower(1);
+            hardware.backLeftMotor.setVelocity(mVelocity);
+            hardware.backRightMotor.setVelocity(mVelocity);
 
             wait(100);
 
+
+            hardware.backLeftMotor.setVelocity(0);
+            hardware.backRightMotor.setVelocity(0);
             hardware.backLeftMotor.setPower(0);
             hardware.backRightMotor.setPower(0);
 
