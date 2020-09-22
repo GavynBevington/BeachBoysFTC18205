@@ -12,8 +12,6 @@ public class Auto_ParkOnLine extends LinearOpMode
 {
 
     robotHardware hardware = new robotHardware();
-//    private DcMotor LBM;
-//    private DcMotor RBM;
 
     @Override
     public void runOpMode()
