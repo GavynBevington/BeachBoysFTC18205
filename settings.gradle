@@ -1,4 +1,2 @@
-include ':TeamCode'
 include ':FtcRobotController'
-project(':FtcRobotController').projectDir = new File(rootDir, 'SkyStone-master/FtcRobotController/')
-project(':TeamCode').projectDir = new File(rootDir, 'SkyStone-master/TeamCode/')
+include ':TeamCode'
