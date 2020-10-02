@@ -23,7 +23,7 @@ public class intakePrototype extends LinearOpMode
         {
             double runIntake = -this.gamepad1.left_stick_y;
 
-            hardware.intakeMotor.setPower(runIntake *2);
+            hardware.intakeMotor.setPower(runIntake);
 
         }
 

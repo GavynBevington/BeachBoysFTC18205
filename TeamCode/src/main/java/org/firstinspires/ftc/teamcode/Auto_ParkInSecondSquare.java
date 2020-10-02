@@ -54,10 +54,11 @@ public class Auto_ParkInSecondSquare extends LinearOpMode {
 
         // Step through each leg of the path,
         // Note: Reverse movement is obtained by setting a negative distance (not speed)
-        encoderDrive(DRIVE_SPEED,  80,  80, 6.0);  // S1: Forward 47 Inches with 5 Sec timeout
-        encoderDrive(TURN_SPEED,   2, -2, 3.0);  // S2: Turn Right 12 Inches with 4 Sec timeout
-        encoderDrive(DRIVE_SPEED, 25, 25, 3.0);  // S3: Reverse 24 Inches with 4 Sec timeout
-        encoderDrive(DRIVE_SPEED, -30, -30, 4.0);
+        encoderDrive(DRIVE_SPEED,  80,  80, 6.0);  // S1: Forward 80 Inches with 6 Sec timeout
+        encoderDrive(TURN_SPEED,   2, -2, 3.0);  // S2: Turn Right 2 Inches with 3 Sec timeout
+        encoderDrive(DRIVE_SPEED, 5, 5, 2);  // S3: Forward 5 Inches with 2 Sec timeout
+        encoderDrive(TURN_SPEED, -2, 2, 3);  // S4: Turn left 2 Inches with 3 Sec timeout
+        encoderDrive(DRIVE_SPEED, -30, -30, 4.0);  // S5: Reverse 30 Inches with 4 Sec timeout
 
         sleep(1000);     // pause for servos to move
 

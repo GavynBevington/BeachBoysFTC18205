@@ -8,6 +8,8 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 
 import org.firstinspires.ftc.teamcode.robotHardware;
 
+import java.sql.Driver;
+
 
 @Autonomous
 
@@ -55,13 +57,12 @@ public class Auto_ParkInFirstSquare extends LinearOpMode {
 
         // Step through each leg of the path,
         // Note: Reverse movement is obtained by setting a negative distance (not speed)
-        encoderDrive(DRIVE_SPEED,  65,  65, 6.0);  // S1: Forward 47 Inches with 5 Sec timeout
-        encoderDrive(DRIVE_SPEED, 5, 5, 3);
-        encoderDrive(TURN_SPEED,   9, -9, 4);
+        encoderDrive(DRIVE_SPEED,  70,  70, 7.0);  // S1: Forward 70 Inches with 7 Sec timeout
+        encoderDrive(TURN_SPEED,   9, -9, 4); // S2: Turn right 9 Inches with 4 Sec timeout
+        encoderDrive(DRIVE_SPEED, 15, 15, 3.0);  // S3: Forward 15 Inches with 3 Sec timeout
+        encoderDrive(DRIVE_SPEED, -7, -7, 4.0); // S4: Reverse 7 Inches with 4 Sec timeout
+        encoderDrive(TURN_SPEED, -9, 9, 4); // S5: Turn Left 8.5 Inches with 4 Sec timeout
 
-        encoderDrive(DRIVE_SPEED, 15, 15, 3.0);  // S3: Reverse 24 Inches with 4 Sec timeout
-        encoderDrive(DRIVE_SPEED, -15, -15, 4.0);
-        encoderDrive(TURN_SPEED, -9, 9, 4);
 
         sleep(1000);     // pause for servos to move
 
