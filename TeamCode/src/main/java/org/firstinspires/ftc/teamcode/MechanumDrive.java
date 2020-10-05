@@ -24,15 +24,19 @@ public class MechanumDrive extends LinearOpMode {
         while (opModeIsActive()) {
 
             double driveY = -this.gamepad1.left_stick_y;
-            double Turn = this.gamepad1.right_stick_x;
+            double turn = this.gamepad1.right_stick_x;
             double strafe = this.gamepad1.left_stick_x;
-            Double[] proportionate = {Math.abs(driveY + Turn + strafe), Math.abs(driveY - Turn - strafe), Math.abs(driveY + Turn - strafe), Math.abs(driveY - Turn + strafe)};
+            double FLI = driveY + turn + strafe;
+            double FRI = driveY - turn - strafe;
+            double RRI = driveY + turn - strafe;
+            double RLI = driveY - turn + strafe;
+            Double[] proportionate = {Math.abs(FLI), Math.abs(FRI), Math.abs(RRI), Math.abs(RLI)};
             double scale = Collections.max(Arrays.asList(proportionate));
 
-            hardware.FL.setPower(driveY + Turn + strafe / scale);
-            hardware.FR.setPower(driveY - Turn - strafe / scale);
-            hardware.RR.setPower(driveY + Turn - strafe / scale);
-            hardware.RL.setPower(driveY - Turn + strafe / scale);
+            hardware.FL.setPower(FLI / scale);
+            hardware.FR.setPower(FRI / scale);
+            hardware.RR.setPower(RRI / scale);
+            hardware.RL.setPower(RLI / scale);
 
         }
     }
