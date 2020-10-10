@@ -26,10 +26,8 @@ public class MechanumDrive extends LinearOpMode {
             double driveY = -this.gamepad1.left_stick_y;
             double turn = this.gamepad1.right_stick_x;
             double strafe = this.gamepad1.left_stick_x;
-            double FLI = driveY + turn + strafe;
-            double FRI = driveY - turn - strafe;
-            double RRI = driveY + turn - strafe;
-            double RLI = driveY - turn + strafe;
+
+
             Double[] proportionate = {Math.abs(FLI), Math.abs(FRI), Math.abs(RRI), Math.abs(RLI)};
             double scale = Collections.max(Arrays.asList(proportionate));
 
