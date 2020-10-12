@@ -26,10 +26,10 @@ public class mecanumJoystickReading extends LinearOpMode {
             double turn = this.gamepad1.right_stick_x;
 
             double r = Math.sqrt(xValue*xValue + yValue*yValue);
-            double theta = Math.atan2(yValue, xValue);
+            double theta = Math.atan2(yValue, xValue) - Math.PI/4;
 
-            double sinPower = r*Math.sin(theta - Math.PI/4);
-            double cosPower = r*Math.cos(theta - Math.PI/4);
+            double sinPower = r*Math.sin(theta);
+            double cosPower = r*Math.cos(theta);
 
             hardware.FR.setPower(sinPower + turn);
             hardware.FL.setPower(cosPower - turn);
