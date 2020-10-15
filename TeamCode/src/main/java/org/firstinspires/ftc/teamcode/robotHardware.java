@@ -12,8 +12,6 @@ import com.qualcomm.robotcore.hardware.DistanceSensor;
 
 public class robotHardware {
 
-    public DcMotor backLeftMotor;
-    public DcMotor backRightMotor;
     public Servo firstServo;
     public DcMotor intakeMotor;
     public DcMotor FL;
@@ -24,8 +22,7 @@ public class robotHardware {
 
     public void init(HardwareMap hardwareMap)
     {
-        backLeftMotor =  hardwareMap.dcMotor.get("LBM");
-        backRightMotor = hardwareMap.dcMotor.get("RBM");
+
         firstServo = hardwareMap.servo.get("servo");
         distanceSensor = hardwareMap.get(DistanceSensor.class, "distanceSensor");
         FL = hardwareMap.dcMotor.get("FrontLeft");
@@ -36,7 +33,6 @@ public class robotHardware {
         intakeMotor = hardwareMap.dcMotor.get("iM");
 
         intakeMotor.setDirection(DcMotorSimple.Direction.REVERSE);
-        backLeftMotor.setDirection(DcMotorSimple.Direction.REVERSE);
         FL.setDirection(DcMotorSimple.Direction.REVERSE);
         RL.setDirection(DcMotorSimple.Direction.REVERSE);
     }

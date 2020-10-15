@@ -31,10 +31,10 @@ public class mecanumJoystickReading extends LinearOpMode {
             double sinPower = r*Math.sin(theta);
             double cosPower = r*Math.cos(theta);
 
-            hardware.FR.setPower(sinPower + turn);
-            hardware.FL.setPower(cosPower - turn);
-            hardware.RL.setPower(sinPower - turn);
-            hardware.RR.setPower(cosPower + turn);
+            hardware.FR.setPower(sinPower - turn);
+            hardware.FL.setPower(cosPower + turn);
+            hardware.RL.setPower(sinPower + turn);
+            hardware.RR.setPower(cosPower - turn);
 
             telemetry.addData("sin", sinPower);
             telemetry.addData("cos", cosPower);
