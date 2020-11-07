@@ -5,6 +5,8 @@ import com.qualcomm.hardware.bosch.JustLoggingAccelerationIntegrator;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.DigitalChannel;
+import com.qualcomm.robotcore.hardware.GyroSensor;
+import com.qualcomm.robotcore.hardware.Gyroscope;
 import com.qualcomm.robotcore.hardware.OpticalDistanceSensor;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -36,6 +38,7 @@ public class robotHardware {
         FR = hardwareMap.dcMotor.get("FrontRight");
         RR = hardwareMap.dcMotor.get("RearRight");
         RL = hardwareMap.dcMotor.get("RearLeft");
+
 
         intakeMotor = hardwareMap.dcMotor.get("iM");
 

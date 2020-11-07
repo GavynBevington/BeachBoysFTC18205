@@ -32,6 +32,7 @@ public class AutoTest extends LinearOpMode {
             hardware.RL.setPower(0.33);
             hardware.FR.setPower(0.33);
             hardware.FL.setPower(-0.33);
+
         }
     }
 
