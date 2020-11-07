@@ -24,6 +24,7 @@ public class mecanumJoystickReading extends LinearOpMode {
             double xValue = this.gamepad1.left_stick_x;
             double yValue = -this.gamepad1.left_stick_y;
             double turn = this.gamepad1.right_stick_x;
+            double intake = this.gamepad1.right_trigger;
 
             double r = Math.sqrt(xValue*xValue + yValue*yValue);
             double theta = Math.atan2(yValue, xValue) - Math.PI/4;
@@ -36,8 +37,11 @@ public class mecanumJoystickReading extends LinearOpMode {
             hardware.RL.setPower(sinPower + turn);
             hardware.RR.setPower(cosPower - turn);
 
-            telemetry.addData("sin", sinPower);
-            telemetry.addData("cos", cosPower);
+            hardware.intakeMotor.setPower(intake);
+
+            telemetry.addData("Power:", intake);
+            telemetry.addData("sin:", sinPower);
+            telemetry.addData("cos:", cosPower);
             telemetry.update();
         }
     }
