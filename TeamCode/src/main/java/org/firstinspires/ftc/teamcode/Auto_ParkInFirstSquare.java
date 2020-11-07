@@ -64,6 +64,7 @@ public class Auto_ParkInFirstSquare extends LinearOpMode {
         // Step through each leg of the path,
         // Note: Reverse movement is obtained by setting a negative distance (not speed)
         encoderDrive(DRIVE_SPEED,  60,  60, 7.0);  // S1: Forward 70 Inches with 7 Sec timeout
+        encoderStrafe(DRIVE_SPEED, 20,20, 5);
 //        encoderDrive(TURN_SPEED,   9, -9, 4); // S2: Turn right 9 Inches with 4 Sec timeout
 //        encoderDrive(DRIVE_SPEED, 15, 15, 3.0);  // S3: Forward 15 Inches with 3 Sec timeout
 //        encoderDrive(DRIVE_SPEED, -7, -7, 4.0); // S4: Reverse 7 Inches with 4 Sec timeout
@@ -84,9 +85,65 @@ public class Auto_ParkInFirstSquare extends LinearOpMode {
      *  2) Move runs out of time
      *  3) Driver stops the opmode running.
      */
-    public void encoderDrive(double speed,
-                             double leftInches, double rightInches,
-                             double timeoutS) {
+
+        public void encoderStrafe (double speed, double leftInches, double rightInches, double timeoutS) {
+
+            int FLRRTarget;
+            int FRRLTarget;
+
+            FLRRTarget = hardware.FL.getCurrentPosition() + (int)(leftInches * COUNTS_PER_INCH);
+            FRRLTarget = hardware.FR.getCurrentPosition() - (int)(leftInches * COUNTS_PER_INCH);
+
+            hardware.FL.setTargetPosition(FLRRTarget);
+            hardware.RR.setTargetPosition(FLRRTarget);
+            hardware.RL.setTargetPosition(FRRLTarget);
+            hardware.FR.setTargetPosition(FRRLTarget);
+
+            hardware.FR.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+            hardware.FL.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+            hardware.RR.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+            hardware.RL.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+            hardware.FR.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            hardware.FL.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            hardware.RR.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            hardware.RL.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+
+            runtime.reset();
+            hardware.FL.setPower(Math.abs(speed));
+            hardware.FR.setPower(Math.abs(speed));
+            hardware.RR.setPower(Math.abs(speed));
+            hardware.RL.setPower(Math.abs(speed));
+
+            while (opModeIsActive() &&
+                    (runtime.seconds() < timeoutS) &&
+                    (hardware.FR.isBusy() && hardware.FL.isBusy() && hardware.RR.isBusy() && hardware.RL.isBusy())) {
+
+                // Display it for the driver.
+                telemetry.addData("Path1",  "Running to %7d :%7d", FLRRTarget,  FRRLTarget);
+                telemetry.addData("Path2",  "Running at %7d :%7d",
+                        hardware.FR.getCurrentPosition(),
+                        hardware.FL.getCurrentPosition(),
+                        hardware.RR.getCurrentPosition(),
+                        hardware.RL.getCurrentPosition());
+                telemetry.update();
+            }
+
+            hardware.FR.setPower(0);
+            hardware.FL.setPower(0);
+            hardware.RR.setPower(0);
+            hardware.RL.setPower(0);
+
+            // Turn off RUN_TO_POSITION
+            hardware.FR.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            hardware.FL.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            hardware.RR.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            hardware.RL.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+
+        }
+
+    public void encoderDrive (double speed,
+                              double leftInches, double rightInches,
+                              double timeoutS) {
         int newLeftTarget;
         int newRightTarget;
 
@@ -97,8 +154,8 @@ public class Auto_ParkInFirstSquare extends LinearOpMode {
             newLeftTarget = hardware.FR.getCurrentPosition() + (int)(leftInches * COUNTS_PER_INCH);
             newRightTarget = hardware.FL.getCurrentPosition() + (int)(rightInches * COUNTS_PER_INCH);
 
-            hardware.FR.setTargetPosition(newLeftTarget);
-            hardware.FL.setTargetPosition(newRightTarget);
+            hardware.FR.setTargetPosition(newRightTarget);
+            hardware.FL.setTargetPosition(newLeftTarget);
             hardware.RR.setTargetPosition(newRightTarget);
             hardware.RL.setTargetPosition(newLeftTarget);
 
