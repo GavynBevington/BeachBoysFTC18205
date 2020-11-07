@@ -4,6 +4,8 @@ import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.GyroSensor;
+import com.qualcomm.robotcore.hardware.IntegratingGyroscope;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
 import org.firstinspires.ftc.teamcode.robotHardware;
@@ -14,6 +16,8 @@ import java.sql.Driver;
 @Autonomous
 
 public class Auto_ParkInFirstSquare extends LinearOpMode {
+
+    GyroSensor sensorGyro;
 
     /* Declare OpMode members. */
     robotHardware  hardware   = new robotHardware();   // Use a Pushbot's hardware
@@ -29,6 +33,13 @@ public class Auto_ParkInFirstSquare extends LinearOpMode {
     @Override
     public void runOpMode() {
 
+        sensorGyro = hardwareMap.gyroSensor.get("gyro");
+        int Accumulated;
+        int target = 0;
+        double turnSpeed = 0.15;
+
+        sleep(1000);
+        sensorGyro.calibrate();
         /*
          * Initialize the drive system variables.
          * The init() method of the hardware class does all the work here
@@ -64,6 +75,7 @@ public class Auto_ParkInFirstSquare extends LinearOpMode {
         // Step through each leg of the path,
         // Note: Reverse movement is obtained by setting a negative distance (not speed)
         encoderDrive(DRIVE_SPEED,  60,  60, 7.0);  // S1: Forward 70 Inches with 7 Sec timeout
+        gyroTurn(turnSpeed);
         encoderStrafe(DRIVE_SPEED, 20,20, 5);
 //        encoderDrive(TURN_SPEED,   9, -9, 4); // S2: Turn right 9 Inches with 4 Sec timeout
 //        encoderDrive(DRIVE_SPEED, 15, 15, 3.0);  // S3: Forward 15 Inches with 3 Sec timeout
@@ -86,7 +98,7 @@ public class Auto_ParkInFirstSquare extends LinearOpMode {
      *  3) Driver stops the opmode running.
      */
 
-        public void encoderStrafe (double speed, double leftInches, double rightInches, double timeoutS) {
+    public void encoderStrafe (double speed, double leftInches, double rightInches, double timeoutS) {
 
             int FLRRTarget;
             int FRRLTarget;
@@ -205,6 +217,39 @@ public class Auto_ParkInFirstSquare extends LinearOpMode {
             hardware.RL.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
             //  sleep(250);   // optional pause after each move
+        }
+    }
+
+    public void gyroTurn (double turnSpeed) {
+
+        while (opModeIsActive()) {
+
+            double Accumulated = sensorGyro.getHeading();
+            double target = 0;
+
+            while (Math.abs(Accumulated - target) > 3){
+                if (Accumulated > 0) {
+                    hardware.FR.setPower(+turnSpeed);
+                    hardware.FL.setPower(-turnSpeed);
+                    hardware.RL.setPower(-turnSpeed);
+                    hardware.RR.setPower(+turnSpeed);
+                }
+
+                if (Accumulated < 0) {
+                    hardware.FR.setPower(-turnSpeed);
+                    hardware.FL.setPower(+turnSpeed);
+                    hardware.RL.setPower(+turnSpeed);
+                    hardware.RR.setPower(-turnSpeed);
+                }
+                Accumulated = sensorGyro.getHeading();
+                telemetry.addData("heading:", Accumulated);
+            }
+            hardware.FR.setPower(0);
+            hardware.FL.setPower(0);
+            hardware.RL.setPower(0);
+            hardware.RR.setPower(0);
+
+            telemetry.addData("heading:", Accumulated);
         }
     }
 }
