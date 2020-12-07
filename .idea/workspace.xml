@@ -2,16 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5830ed3b-0167-4c74-8c9f-71a44c9364b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/TeamCode/TeamCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/TeamCode/TeamCode.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/MainAuto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/MainRobotCodeSoloDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/tele.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/wobblePrototype.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/AutoWithGyro.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/AutoWithGyro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Auto_ParkInFirstSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Auto_ParkInFirstSquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/AutoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/AutoWithGyro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Auto_ParkInFirstSquare.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Auto_ParkInSecondSquare.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Auto_ParkInThirdSquare.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/MainRobotCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/MainRobotCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/ShooterAlone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/auto_WithoutEncoders.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/intakeWithAButton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/mecanumJoystickReading.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/mecanumJoystickReading.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/robotHardware.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/robotHardware.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/teleOp_DistanceSensor.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="5d71961bbae0203f" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -59,6 +76,11 @@
     <option name="BUILD_VARIANTS_TAB" value="Build Types" />
     <option name="LAST_EDITED_SIGNING_CONFIG" value="debug" />
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.firstinspires.ftc.teamcode" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -164,6 +186,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="291" width="438" height="289" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.864@0.0.1536.864" timestamp="1601677459615" />
+    <state x="514" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607175164731">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="514" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1607175164731" />
     <state x="349" y="187" key="AndroidCreateResourceDirectoryDialog" timestamp="1601141031268">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -173,26 +199,26 @@
     </state>
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1602633253002" />
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1603741695268" />
-    <state width="1537" height="582" key="GridCell.Tab.0.bottom" timestamp="1604435316848">
+    <state width="1537" height="582" key="GridCell.Tab.0.bottom" timestamp="1607203220138">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1537" height="231" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1600820924918" />
-    <state width="1537" height="582" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1604435316848" />
-    <state width="1537" height="582" key="GridCell.Tab.0.center" timestamp="1604435316848">
+    <state width="1537" height="582" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1607203220138" />
+    <state width="1537" height="582" key="GridCell.Tab.0.center" timestamp="1607203220138">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1537" height="231" key="GridCell.Tab.0.center/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1600820924918" />
-    <state width="1537" height="582" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1604435316848" />
-    <state width="1537" height="582" key="GridCell.Tab.0.left" timestamp="1604435316847">
+    <state width="1537" height="582" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1607203220138" />
+    <state width="1537" height="582" key="GridCell.Tab.0.left" timestamp="1607203220138">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1537" height="231" key="GridCell.Tab.0.left/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1600820924918" />
-    <state width="1537" height="582" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1604435316847" />
-    <state width="1537" height="582" key="GridCell.Tab.0.right" timestamp="1604435316848">
+    <state width="1537" height="582" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1607203220138" />
+    <state width="1537" height="582" key="GridCell.Tab.0.right" timestamp="1607203220138">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1537" height="231" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1600820924918" />
-    <state width="1537" height="582" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1604435316848" />
+    <state width="1537" height="582" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1607203220138" />
     <state x="277" y="75" key="SettingsEditor" timestamp="1602797108075">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -201,15 +227,15 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="100" y="116" width="1336" height="655" key="dock-window-1/0.0.1536.864@0.0.1536.864" timestamp="1601332872041" />
-    <state x="358" y="193" key="run.anything.popup" timestamp="1604437192757">
+    <state x="358" y="193" key="run.anything.popup" timestamp="1607205272908">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="358" y="193" key="run.anything.popup/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1602288738051" />
+    <state x="358" y="193" key="run.anything.popup/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1606941627170" />
     <state x="2218" y="161" key="run.anything.popup/0.0.1536.864/1920.0.1280.720@1920.0.1280.720" timestamp="1601766193257" />
-    <state x="358" y="193" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1604437192757" />
-    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1602882774912">
+    <state x="358" y="193" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1607205272908" />
+    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1606855926024">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1602882774912" />
+    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1606855926024" />
   </component>
 </project>

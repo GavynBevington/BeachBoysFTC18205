@@ -2,8 +2,7 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-import java.util.Arrays;
-import java.util.Collections;
+
 import java.lang.Math;
 
 @TeleOp (name = "mecanumTest", group = "mecanum")
@@ -32,10 +31,10 @@ public class mecanumJoystickReading extends LinearOpMode {
             double sinPower = r*Math.sin(theta);
             double cosPower = r*Math.cos(theta);
 
-            hardware.FR.setPower(sinPower - turn);
-            hardware.FL.setPower(cosPower + turn);
-            hardware.RL.setPower(sinPower + turn);
-            hardware.RR.setPower(cosPower - turn);
+            hardware.FrontRightMotor.setPower(sinPower - turn);
+            hardware.FrontLeftMotor.setPower(cosPower + turn);
+            hardware.RearLeftMotor.setPower(sinPower + turn);
+            hardware.RearRightMotor.setPower(cosPower - turn);
 
             hardware.intakeMotor.setPower(intake);
 
